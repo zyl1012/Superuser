@@ -1,3 +1,4 @@
-APP_ABI := x86 armeabi mips
+APP_ABI := armeabi-v7a
 # NDK_TOOLCHAIN_VERSION=4.8
 APP_PIE = true
+APP_PLATFORM := android-16
