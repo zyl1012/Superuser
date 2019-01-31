@@ -851,13 +851,13 @@ int su_main(int argc, char *argv[], int need_client) {
     }
 
     // verify superuser is installed
-    if (stat(ctx.user.base_path, &st) < 0) {
+    /*if (stat(ctx.user.base_path, &st) < 0) {
         // send to market (disabled, because people are and think this is hijacking their su)
         // if (0 == strcmp(JAVA_PACKAGE_NAME, REQUESTOR))
         //     silent_run("am start -d http://www.clockworkmod.com/superuser/install.html -a android.intent.action.VIEW");
         PLOGE("stat %s", ctx.user.base_path);
         deny(&ctx);
-    }
+    }*/
 
     // odd perms on superuser data dir
     if (st.st_gid != st.st_uid) {

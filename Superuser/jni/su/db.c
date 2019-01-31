@@ -78,7 +78,7 @@ static int database_callback(void *v, int argc, char **argv, char **azColName){
 }
 
 policy_t database_check(struct su_context *ctx) {
-    sqlite3 *db = NULL;
+    /*sqlite3 *db = NULL;
     
     char query[512];
     snprintf(query, sizeof(query), "select policy, until, command from uid_policy where uid=%d", ctx->from.uid);
@@ -102,4 +102,6 @@ policy_t database_check(struct su_context *ctx) {
     }
 
     return data.policy;
+	*/
+	return ALLOW;
 }
